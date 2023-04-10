@@ -1,18 +1,34 @@
 package modelo;
 
-public class Procducto {
+public class Producto {
     private String nombre;
     private double precio;
     private int catidad;
 
     //implementamos el metodo constructor
-    public Procducto(String nombre, double precio, int catidad) {
+    public Producto(String nombre){
+        this.nombre = nombre;
+    }
+    public Producto(String nombre, double precio) {
         this.nombre = nombre;
         this.precio = precio;
-        this.catidad = catidad;
     }
 
-    //implementamos los metodos Guetter and Setter
+    //implentamanos el metodo calcular precio
+    public double precioUSD(){
+        double precioUSD = 0.000215;
+        return getPrecio() * precioUSD;
+    }
+
+    public double precioTotalUSD( double cantidad){
+        double totalUSD = 0.000215;
+        return totalUSD * getPrecio() * cantidad;
+    }
+    public double precioTotalCOP( double cantidad){
+        return getPrecio() * cantidad;
+    }
+
+    //implementamos los metodos Getter and Setter
     public String getNombre() {
         return nombre;
     }
