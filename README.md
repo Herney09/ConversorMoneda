@@ -1,2 +1,2 @@
 # ConversorMoneda
-Este es un programa con interfaz grafica que convierte el precio de un producto de COP a USD y vicevers.
+Este es un programa con interfaz grafica de usuario que convierte el precio de un producto que está en Dolares (USD) a pesos colombianos (COP).
