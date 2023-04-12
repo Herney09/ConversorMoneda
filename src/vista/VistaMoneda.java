@@ -38,8 +38,6 @@ public class VistaMoneda extends JFrame {
                 control.setCalPrecio(product);
                 textUnitarioCOP.setText(Double.toString(Util.redondearDecimales(product.getPrecio(),2)));
                 textUnitarioUSD.setText(Double.toString(Util.redondearDecimales(product.precioUSD(),2)));
-                //textUnitarioCOP.setText(Double.toString(product.getPrecio()));
-                //textUnitarioUSD.setText(Double.toString(product.precioUSD()));
             }
         });
 
@@ -55,7 +53,7 @@ public class VistaMoneda extends JFrame {
                 System.out.println("El precio total en dolares es: "+precioTotalUSD);
                 System.out.println("El precio total en dolares es: "+precioTotalCOP);
                 textCOP.setText(String.valueOf(Util.redondearDecimales(Double.parseDouble(precioTotalCOP),2)));
-                textUSD.setText(String.valueOf(precioTotalUSD));
+                textUSD.setText(String.valueOf(Util.redondearDecimales(precioTotalUSD,2)));
 
             }
         });

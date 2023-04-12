@@ -16,8 +16,8 @@ public class Producto {
 
     //implentamanos el metodo calcular precio
     public double precioUSD(){
-        double precioUSD = 0.000215;
-        return getPrecio() * precioUSD;
+        double precioUSD = 4507.80;
+        return getPrecio() / precioUSD;
     }
 
     public double precioTotalUSD( double cantidad){
