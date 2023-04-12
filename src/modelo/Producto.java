@@ -21,8 +21,8 @@ public class Producto {
     }
 
     public double precioTotalUSD( double cantidad){
-        double totalUSD = 0.000215;
-        return totalUSD * getPrecio() * cantidad;
+        double totalUSD = 4507.80;
+        return  getPrecio() * cantidad/totalUSD;
     }
     public double precioTotalCOP( double cantidad){
         return getPrecio() * cantidad;

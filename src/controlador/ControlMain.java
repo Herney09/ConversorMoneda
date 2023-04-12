@@ -20,7 +20,6 @@ public class ControlMain {
         vista.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         vista.setVisible(true);
         vista.pack();
-
     }
 
     public void addProduct(){
@@ -43,6 +42,10 @@ public class ControlMain {
 
     public Producto getCalPrecio() {
         return calPrecio;
+    }
+
+    public void setCalPrecio(Producto calPrecio) {
+        this.calPrecio = calPrecio;
     }
 }
 
