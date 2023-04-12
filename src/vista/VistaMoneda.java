@@ -36,6 +36,7 @@ public class VistaMoneda extends JFrame {
                 int select = comBoxProducto.getSelectedIndex();
                 Producto product = control.getListaProductos().get(select);
                 control.setCalPrecio(product);
+                // mostramos los precios de los productos cuando son selecionados
                 textUnitarioCOP.setText(Double.toString(Util.redondearDecimales(product.getPrecio(),2)));
                 textUnitarioUSD.setText(Double.toString(Util.redondearDecimales(product.precioUSD(),2)));
             }
@@ -44,14 +45,17 @@ public class VistaMoneda extends JFrame {
         obtenerPrecioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // variables que reciben los datos de los texfield
                 String cantidadTxt = textCantidad.getText();
                 int cantidad = Integer.parseInt(cantidadTxt);
 
+                //converion de strin a double
                 double precioTotalUSD = control.getCalPrecio().precioTotalUSD(cantidad);
                 String precioTotalCOP = String.valueOf(control.getCalPrecio().precioTotalCOP(cantidad));
-
+                // imprimimos por consola
                 System.out.println("El precio total en dolares es: "+precioTotalUSD);
                 System.out.println("El precio total en dolares es: "+precioTotalCOP);
+                // redondeamos los valores con la clase Util
                 textCOP.setText(String.valueOf(Util.redondearDecimales(Double.parseDouble(precioTotalCOP),2)));
                 textUSD.setText(String.valueOf(Util.redondearDecimales(precioTotalUSD,2)));
 

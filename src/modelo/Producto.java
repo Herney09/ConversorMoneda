@@ -1,11 +1,12 @@
 package modelo;
 
 public class Producto {
+    // definicion de variables
     private String nombre;
     private double precio;
     private int catidad;
 
-    //implementamos el metodo constructor
+    //implementamos dos metodos constructores
     public Producto(String nombre){
         this.nombre = nombre;
     }
@@ -14,16 +15,18 @@ public class Producto {
         this.precio = precio;
     }
 
-    //implentamanos el metodo calcular precio
+    //metodo calcular precio unitario en dolares
     public double precioUSD(){
         double precioUSD = 4507.80;
         return getPrecio() / precioUSD;
     }
 
+    // metodo para calcular el valor el valor total en dolares
     public double precioTotalUSD( double cantidad){
         double totalUSD = 4507.80;
         return  getPrecio() * cantidad/totalUSD;
     }
+    // metodo para calcular el valor el valor total en pesos colombianos
     public double precioTotalCOP( double cantidad){
         return getPrecio() * cantidad;
     }
